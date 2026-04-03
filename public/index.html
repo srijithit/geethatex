@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>GeethaTex – Best Soft Silk &amp; Kerala Sarees</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet"/>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Lato', sans-serif; background: #fff; color: #1a1a1a; overflow-x: hidden; }
+    :root {
+      --gold: #b8860b; --gold2: #d4a017;
+      --dark: #1c1c1c; --light: #fdf8f2; --border: #e5ddd0;
+      --muted: #777; --green: #25d366; --danger: #c0392b; --success: #27ae60;
+    }
+    ::-webkit-scrollbar { width: 5px; }
+    ::-webkit-scrollbar-thumb { background: var(--gold); border-radius: 3px; }
+
+    /* HEADER */
+    header {
+      position: sticky; top: 0; z-index: 200;
+      background: #fff; border-bottom: 1px solid var(--border);
+      padding: 0 5%; display: flex; align-items: center; justify-content: space-between;
+      height: 68px; box-shadow: 0 2px 12px rgba(0,0,0,.06);
+    }
+    .logo {
+      font-family: 'Cormorant Garamond', serif; font-size: 1.75rem; font-weight: 600;
+      color: var(--dark); text-decoration: none; cursor: pointer; user-select: none;
+      display: flex; align-items: center; gap: 6px;
+    }
+    .logo-hint { font-size: .58rem; color: #ccc; transition: color .3s; letter-spacing: 0; }
+    nav { display: flex; gap: 2rem; align-items: center; }
+    nav a {
+      text-decoration: none; color: #444; font-size: .85rem;
+      letter-spacing: .06em; text-transform: uppercase;
+      position: relative; padding-bottom: 2px; transition: color .2s;
+    }
+    nav a::after { content:''; position:absolute; bottom:0; left:0; width:0; height:1.5px; background:var(--gold); transition:width .25s; }
+    nav a:hover { color: var(--gold); }
+    nav a:hover::after { width: 100%; }
+    .nav-wa { background:var(--green); color:#fff !important; padding:.4rem 1.1rem; border-radius:22px; font-size:.8rem !important; display:flex; align-items:center; gap:.35rem; }
+    .nav-wa::after { display:none !important; }
+    @media(max-width:640px){ nav { display:none; } }
+
+    /* HERO */
+    .hero {
+      position: relative; overflow: hidden;
+      background: linear-gradient(135deg,#1c1c1c 0%,#2e1e00 55%,#1c1c1c 100%);
+      min-height: 92vh; display: flex; align-items: center; justify-content: center;
+      text-align: center; padding: 5rem 5%;
+    }
+    .hero-bg { position:absolute; font-family:'Cormorant Garamond',serif; font-size:22vw; color:rgba(255,255,255,.025); top:50%; left:50%; transform:translate(-50%,-50%); white-space:nowrap; pointer-events:none; user-select:none; }
+    .hero-tag { display:inline-block; border:1px solid rgba(184,134,11,.5); color:var(--gold2); font-size:.72rem; letter-spacing:.2em; text-transform:uppercase; padding:.35rem 1.2rem; border-radius:20px; margin-bottom:1.4rem; }
+    .hero h1 { font-family:'Cormorant Garamond',serif; font-size:clamp(2.4rem,6vw,4.5rem); color:#fff; line-height:1.15; margin-bottom:1rem; }
+    .hero h1 em { color:var(--gold2); font-style:italic; }
+    .hero p { color:rgba(255,255,255,.6); font-size:1rem; max-width:500px; margin:0 auto 2.2rem; line-height:1.75; }
+    .hero-btns { display:flex; gap:1rem; justify-content:center; flex-wrap:wrap; }
+    .btn-primary { background:var(--gold); color:#fff; border:none; padding:.78rem 2rem; border-radius:3px; font-size:.88rem; font-family:'Lato',sans-serif; font-weight:700; letter-spacing:.06em; text-transform:uppercase; cursor:pointer; text-decoration:none; transition:background .2s,transform .15s; display:inline-flex; align-items:center; gap:.4rem; }
+    .btn-primary:hover { background:var(--gold2); transform:translateY(-2px); }
+    .btn-ghost { background:transparent; color:#fff; border:1px solid rgba(255,255,255,.35); padding:.78rem 2rem; border-radius:3px; font-size:.88rem; font-family:'Lato',sans-serif; letter-spacing:.06em; text-transform:uppercase; cursor:pointer; text-decoration:none; transition:border-color .2s,background .2s; display:inline-flex; align-items:center; gap:.4rem; }
+    .btn-ghost:hover { border-color:var(--gold); background:rgba(184,134,11,.12); }
+    .scroll-hint { position:absolute; bottom:2rem; left:50%; transform:translateX(-50%); font-size:.6rem; letter-spacing:.2em; text-transform:uppercase; color:rgba(255,255,255,.3); display:flex; flex-direction:column; align-items:center; gap:.4rem; }
+    .scroll-hint::after { content:''; width:1px; height:40px; background:rgba(255,255,255,.2); animation:sl 1.5s ease-in-out infinite; }
+    @keyframes sl { 0%,100%{opacity:.2} 50%{opacity:1} }
+
+    /* SECTIONS */
+    .section { padding: 5rem 5%; }
+    .s-label { font-size:.72rem; letter-spacing:.2em; text-transform:uppercase; color:var(--gold); margin-bottom:.5rem; }
+    .s-title { font-family:'Cormorant Garamond',serif; font-size:clamp(1.7rem,3vw,2.5rem); color:var(--dark); margin-bottom:1rem; }
+    .divider { width:48px; height:2px; background:var(--gold); margin:0 auto 2.5rem; }
+    .divider.left { margin:0 0 2.5rem; }
+
+    /* PRODUCTS */
+    #products { background:var(--light); }
+    .filters { display:flex; gap:.6rem; flex-wrap:wrap; margin-bottom:2.5rem; }
+    .filter-btn { padding:.42rem 1.25rem; border-radius:20px; border:1px solid var(--border); background:#fff; font-size:.82rem; color:#555; cursor:pointer; font-family:'Lato',sans-serif; transition:all .2s; }
+    .filter-btn:hover { border-color:var(--gold); color:var(--gold); }
+    .filter-btn.active { background:var(--gold); color:#fff; border-color:var(--gold); }
+    .grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(220px,1fr)); gap:1.5rem; }
+    .pcard { background:#fff; border-radius:6px; overflow:hidden; border:1px solid var(--border); transition:box-shadow .25s,transform .25s; }
+    .pcard:hover { box-shadow:0 12px 32px rgba(0,0,0,.1); transform:translateY(-4px); }
+    .pcard-img { width:100%; aspect-ratio:3/4; background:#f5ede0; display:flex; align-items:center; justify-content:center; font-size:4.5rem; overflow:hidden; position:relative; }
+    .pcard-img img { width:100%; height:100%; object-fit:cover; }
+    .pcard-badge { position:absolute; top:.6rem; left:.6rem; background:var(--gold); color:#fff; font-size:.62rem; font-weight:700; letter-spacing:.06em; text-transform:uppercase; padding:.2rem .6rem; border-radius:2px; }
+    .pcard-body { padding:1rem 1.1rem 1.2rem; }
+    .pcard-cat { font-size:.68rem; letter-spacing:.12em; text-transform:uppercase; color:var(--gold); margin-bottom:.3rem; }
+    .pcard-name { font-weight:700; font-size:.9rem; color:var(--dark); margin-bottom:.4rem; line-height:1.35; }
+    .pcard-price { font-family:'Cormorant Garamond',serif; font-size:1.25rem; color:var(--dark); }
+    .pcard-btn { display:block; width:100%; margin-top:.85rem; background:transparent; border:1px solid var(--gold); color:var(--gold); padding:.5rem; border-radius:3px; font-size:.78rem; font-family:'Lato',sans-serif; cursor:pointer; transition:all .2s; text-align:center; text-decoration:none; letter-spacing:.04em; }
+    .pcard-btn:hover { background:var(--gold); color:#fff; }
+    .empty-g { grid-column:1/-1; text-align:center; padding:4rem 1rem; color:#bbb; }
+
+    /* FEATURES */
+    .features { background:var(--dark); display:flex; justify-content:center; flex-wrap:wrap; }
+    .fi { flex:1; min-width:180px; max-width:260px; padding:2rem 1.5rem; text-align:center; border-right:1px solid rgba(255,255,255,.07); }
+    .fi:last-child { border-right:none; }
+    .fi-icon { font-size:1.8rem; margin-bottom:.7rem; }
+    .fi-title { font-weight:700; font-size:.88rem; color:#fff; margin-bottom:.3rem; letter-spacing:.04em; }
+    .fi-desc { font-size:.78rem; color:rgba(255,255,255,.45); line-height:1.6; }
+
+    /* TESTIMONIALS */
+    #testimonials { background:#fff; text-align:center; }
+    .tgrid { display:grid; grid-template-columns:repeat(auto-fill,minmax(270px,1fr)); gap:1.5rem; margin-top:1rem; }
+    .tcard { background:var(--light); border:1px solid var(--border); border-radius:6px; padding:1.75rem 1.5rem; text-align:left; }
+    .stars { color:var(--gold2); font-size:.95rem; letter-spacing:.08em; margin-bottom:.8rem; }
+    .tq { font-style:italic; color:#555; font-size:.9rem; line-height:1.75; margin-bottom:1.1rem; }
+    .tn { font-weight:700; font-size:.85rem; color:var(--dark); }
+    .tl { font-size:.75rem; color:var(--muted); margin-top:.15rem; }
+
+    /* ORDER */
+    #whatsapp-order { background:linear-gradient(135deg,#fdf8f2 0%,#f5e8d0 100%); text-align:center; padding:5rem 5%; }
+    .opoints { display:flex; gap:1rem; justify-content:center; flex-wrap:wrap; margin:1.5rem 0 2.5rem; }
+    .opoint { background:#fff; border:1px solid var(--border); border-radius:4px; padding:.55rem 1.1rem; font-size:.82rem; color:#555; display:flex; align-items:center; gap:.4rem; }
+    .wa-btn { display:inline-flex; align-items:center; gap:.6rem; background:var(--green); color:#fff; padding:.9rem 2.5rem; border-radius:3px; font-size:.95rem; font-weight:700; font-family:'Lato',sans-serif; text-decoration:none; letter-spacing:.04em; transition:background .2s,transform .15s; }
+    .wa-btn:hover { background:#1ebe5d; transform:translateY(-2px); }
+
+    /* FOOTER */
+    footer { background:var(--dark); color:rgba(255,255,255,.6); padding:3.5rem 5% 1.5rem; display:grid; grid-template-columns:1.5fr 1fr 1fr; gap:2.5rem; }
+    @media(max-width:680px){ footer { grid-template-columns:1fr; } }
+    .flogo { font-family:'Cormorant Garamond',serif; font-size:1.5rem; color:#fff; margin-bottom:.6rem; display:block; }
+    .fdesc { font-size:.82rem; line-height:1.75; max-width:230px; }
+    .fh { font-size:.72rem; letter-spacing:.15em; text-transform:uppercase; color:rgba(255,255,255,.4); margin-bottom:1rem; }
+    .flinks { list-style:none; display:flex; flex-direction:column; gap:.55rem; }
+    .flinks a { color:rgba(255,255,255,.55); text-decoration:none; font-size:.83rem; transition:color .2s; }
+    .flinks a:hover { color:var(--gold2); }
+    .fbot { background:#111; text-align:center; padding:.9rem 5%; font-size:.75rem; color:rgba(255,255,255,.3); border-top:1px solid rgba(255,255,255,.06); }
+    .fbot a { color:rgba(255,255,255,.4); text-decoration:none; }
+    .fbot a:hover { color:var(--gold2); }
+
+    /* WA FLOAT */
+    .wa-float { position:fixed; bottom:1.75rem; right:1.75rem; z-index:150; width:54px; height:54px; border-radius:50%; background:var(--green); color:#fff; font-size:1.6rem; display:flex; align-items:center; justify-content:center; box-shadow:0 4px 18px rgba(37,211,102,.45); text-decoration:none; transition:transform .2s; }
+    .wa-float:hover { transform:scale(1.1); }
+
+    /* ADMIN OVERLAY */
+    .admin-overlay { display:none; position:fixed; inset:0; background:rgba(0,0,0,.75); z-index:1000; align-items:flex-start; justify-content:center; padding:1.5rem; overflow-y:auto; }
+    .admin-overlay.open { display:flex; }
+    .admin-panel { background:#fff; border-radius:10px; width:100%; max-width:960px; overflow:hidden; margin:auto; box-shadow:0 30px 80px rgba(0,0,0,.35); }
+    .admin-hdr { background:var(--dark); padding:1.1rem 1.6rem; display:flex; align-items:center; justify-content:space-between; }
+    .admin-hdr h2 { font-family:'Cormorant Garamond',serif; color:var(--gold2); font-size:1.25rem; font-weight:600; }
+    .admin-hdr-r { display:flex; align-items:center; gap:.75rem; }
+    .btn-logout { background:rgba(255,255,255,.08); border:1px solid rgba(255,255,255,.15); color:rgba(255,255,255,.6); padding:.32rem .8rem; border-radius:4px; font-size:.75rem; cursor:pointer; font-family:'Lato',sans-serif; transition:all .2s; display:none; }
+    .btn-logout:hover { background:rgba(255,255,255,.15); color:#fff; }
+    .btn-x { background:none; border:none; color:#888; font-size:1.4rem; cursor:pointer; line-height:1; padding:.1rem .45rem; border-radius:4px; transition:all .2s; }
+    .btn-x:hover { color:#fff; background:rgba(255,255,255,.1); }
+
+    /* PIN LOGIN */
+    .login-screen { display:none; flex-direction:column; align-items:center; justify-content:center; padding:3rem 1.5rem; min-height:420px; }
+    .login-screen.on { display:flex; }
+    .l-brand { font-family:'Cormorant Garamond',serif; font-size:1.8rem; color:var(--dark); margin-bottom:.25rem; }
+    .l-sub { font-size:.72rem; letter-spacing:.18em; text-transform:uppercase; color:var(--gold); margin-bottom:2rem; }
+
+    /* PIN dots */
+    .pin-dots { display:flex; gap:.85rem; margin-bottom:2rem; }
+    .pin-dot { width:16px; height:16px; border-radius:50%; border:2px solid var(--border); background:#fff; transition:all .2s; }
+    .pin-dot.filled { background:var(--gold); border-color:var(--gold); transform:scale(1.15); }
+    .pin-dot.shake { animation:shake .35s ease; }
+
+    @keyframes shake {
+      0%,100%{transform:translateX(0)}
+      20%{transform:translateX(-6px)}
+      40%{transform:translateX(6px)}
+      60%{transform:translateX(-4px)}
+      80%{transform:translateX(4px)}
+    }
+
+    /* PIN pad */
+    .pin-pad { display:grid; grid-template-columns:repeat(3,1fr); gap:.65rem; width:220px; }
+    .pin-key {
+      aspect-ratio:1; border-radius:50%; border:1.5px solid var(--border);
+      background:#fff; font-family:'Cormorant Garamond',serif;
+      font-size:1.45rem; color:var(--dark); cursor:pointer;
+      display:flex; align-items:center; justify-content:center;
+      transition:all .15s; box-shadow:0 2px 6px rgba(0,0,0,.06);
+      user-select:none; -webkit-tap-highlight-color:transparent;
+    }
+    .pin-key:hover { border-color:var(--gold); color:var(--gold); background:#fffbf2; box-shadow:0 4px 12px rgba(184,134,11,.15); }
+    .pin-key:active { transform:scale(.92); background:#fdf3d8; }
+    .pin-key.del { font-size:1.1rem; color:#aaa; }
+    .pin-key.del:hover { border-color:var(--danger); color:var(--danger); }
+    .pin-key.zero { grid-column:2; }
+
+    .l-err { font-size:.8rem; color:var(--danger); text-align:center; min-height:1.1rem; margin-bottom:.75rem; letter-spacing:.02em; }
+    .pin-hint { font-size:.72rem; color:#bbb; text-align:center; margin-top:1.2rem; letter-spacing:.04em; }
+
+    /* ADMIN CONTENT */
+    .admin-content { display:none; grid-template-columns:1fr 1.1fr; gap:1.75rem; padding:1.75rem; }
+    .admin-content.on { display:grid; }
+    @media(max-width:640px){ .admin-content { grid-template-columns:1fr; } }
+    .col-title { font-size:.88rem; font-weight:700; color:var(--dark); margin-bottom:1rem; padding-bottom:.6rem; border-bottom:1px solid var(--border); display:flex; align-items:center; justify-content:space-between; }
+    .cpill { background:#fdf8f0; color:var(--gold); border:1px solid #e8d8b0; border-radius:20px; padding:.1rem .65rem; font-size:.72rem; font-weight:700; }
+
+    /* form */
+    .fg { margin-bottom:.9rem; }
+    .fg label { display:block; font-size:.7rem; font-weight:700; letter-spacing:.07em; text-transform:uppercase; color:#888; margin-bottom:.3rem; }
+    .fg input,.fg select { width:100%; border:1.5px solid var(--border); border-radius:4px; padding:.65rem .85rem; font-size:.88rem; font-family:'Lato',sans-serif; color:var(--dark); background:#fafaf8; outline:none; transition:border-color .2s; }
+    .fg input:focus,.fg select:focus { border-color:var(--gold); background:#fff; }
+    .fg-row { display:grid; grid-template-columns:1fr 1fr; gap:.75rem; }
+    .img-box { width:100%; height:130px; border:2px dashed var(--border); border-radius:6px; background:#fafaf5; display:flex; flex-direction:column; align-items:center; justify-content:center; cursor:pointer; overflow:hidden; position:relative; transition:border-color .2s; margin-bottom:.9rem; }
+    .img-box:hover { border-color:var(--gold); }
+    .img-box img { width:100%; height:100%; object-fit:cover; }
+    .img-ov { position:absolute; inset:0; background:rgba(0,0,0,.5); color:#fff; display:flex; flex-direction:column; align-items:center; justify-content:center; font-size:.78rem; gap:.3rem; opacity:0; transition:opacity .2s; }
+    .img-box:hover .img-ov { opacity:1; }
+    .img-hint { font-size:.78rem; color:#bbb; margin-top:.3rem; }
+    .btn-add { width:100%; background:var(--dark); color:#fff; border:none; padding:.78rem; border-radius:4px; font-size:.85rem; font-weight:700; font-family:'Lato',sans-serif; letter-spacing:.06em; text-transform:uppercase; cursor:pointer; transition:background .2s; display:flex; align-items:center; justify-content:center; gap:.4rem; }
+    .btn-add:hover { background:#333; }
+    .btn-cancel { width:100%; background:#f5f5f2; color:#888; border:1px solid #e0ddd6; padding:.7rem; border-radius:4px; font-size:.82rem; font-family:'Lato',sans-serif; cursor:pointer; margin-top:.5rem; transition:background .2s; }
+    .btn-cancel:hover { background:#eceae4; }
+
+    /* list */
+    .plist { display:flex; flex-direction:column; gap:.55rem; max-height:480px; overflow-y:auto; padding-right:.25rem; }
+    .pli { display:flex; align-items:center; gap:.85rem; padding:.65rem .85rem; background:#fafaf5; border:1px solid var(--border); border-radius:6px; transition:background .2s; }
+    .pli:hover { background:#f5ead8; border-color:rgba(184,134,11,.2); }
+    .pli-th { width:46px; height:46px; border-radius:5px; flex-shrink:0; background:#f0e4cc; display:flex; align-items:center; justify-content:center; font-size:1.4rem; overflow:hidden; }
+    .pli-th img { width:100%; height:100%; object-fit:cover; }
+    .pli-inf { flex:1; min-width:0; }
+    .pli-nm { font-size:.84rem; font-weight:700; color:var(--dark); white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+    .pli-mt { font-size:.72rem; color:var(--muted); margin-top:.15rem; }
+    .pli-ac { display:flex; gap:.4rem; flex-shrink:0; }
+    .btn-e { background:#fff9e0; border:1px solid #e8cc60; color:#8a6c00; border-radius:4px; padding:.28rem .65rem; font-size:.73rem; cursor:pointer; font-family:'Lato',sans-serif; transition:all .2s; }
+    .btn-e:hover { background:#f5c800; color:#4a3800; }
+    .btn-d { background:#fff0f0; border:1px solid #f5aaaa; color:var(--danger); border-radius:4px; padding:.28rem .65rem; font-size:.73rem; cursor:pointer; font-family:'Lato',sans-serif; transition:all .2s; }
+    .btn-d:hover { background:var(--danger); color:#fff; border-color:var(--danger); }
+
+    /* toast */
+    .toast { position:fixed; bottom:1.5rem; right:1.5rem; z-index:9999; background:var(--dark); color:#fff; padding:.78rem 1.25rem; border-radius:6px; font-size:.84rem; display:flex; align-items:center; gap:.6rem; box-shadow:0 8px 24px rgba(0,0,0,.2); transform:translateY(70px); opacity:0; transition:all .35s cubic-bezier(.34,1.56,.64,1); pointer-events:none; max-width:280px; }
+    .toast.show { transform:translateY(0); opacity:1; }
+    .toast.success { border-left:3px solid var(--success); }
+    .toast.error   { border-left:3px solid var(--danger); }
+  </style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+  <a class="logo" id="logoBtn" href="#" onclick="return false;">
+    GeethaTex
+    <span class="logo-hint" id="tapHint"></span>
+  </a>
+  <nav>
+    <a href="#categories">Collections</a>
+    <a href="#products">Sarees</a>
+    <a href="#whatsapp-order">Order</a>
+    <a href="#contact">Contact</a>
+    <a class="nav-wa" href="https://wa.me/918438860182?text=Hi%20Geetha%20Tex!%20I'd%20like%20to%20order." target="_blank">📲 WhatsApp</a>
+  </nav>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg">Saree</div>
+  <div>
+    <div class="hero-tag">✦ Exclusive Collection 2025 ✦</div>
+    <h1>Soft Silk &amp; <em>Kerala Sarees</em></h1>
+    <p>Draped in tradition, woven with love. Discover the finest handcrafted sarees straight from the loom to your heart.</p>
+    <div class="hero-btns">
+      <a class="btn-primary" href="#products">Explore Collection</a>
+      <a class="btn-ghost" href="https://wa.me/918438860182?text=Hi%20Geetha%20Tex!%20I'd%20like%20to%20place%20a%20saree%20order.%20Please%20help%20me." target="_blank">📲 Order on WhatsApp</a>
+    </div>
+  </div>
+  <div class="scroll-hint">SCROLL</div>
+</section>
+
+<!-- PRODUCTS -->
+<section class="section" id="products">
+  <div class="s-label">Our Sarees</div>
+  <h2 class="s-title">Handpicked Elegance</h2>
+  <div class="divider left"></div>
+  <div class="filters" id="filterRow">
+    <button class="filter-btn active" data-cat="All">All</button>
+    <button class="filter-btn" data-cat="Soft Silk">Soft Silk</button>
+    <button class="filter-btn" data-cat="Kerala Sarees">Kerala Sarees</button>
+    <button class="filter-btn" data-cat="Cotton">Cotton</button>
+    <button class="filter-btn" data-cat="Designer">Designer</button>
+  </div>
+  <div class="grid" id="productsGrid"></div>
+</section>
+
+<!-- FEATURES -->
+<div class="features" id="categories">
+  <div class="fi"><div class="fi-icon">🚚</div><div class="fi-title">Pan-India Shipping</div><div class="fi-desc">Safe and Secure delivered to your doorstep</div></div>
+  <div class="fi"><div class="fi-icon">💬</div><div class="fi-title">WhatsApp Support</div><div class="fi-desc">Chat with us anytime for orders and queries</div></div>
+  <div class="fi"><div class="fi-icon">🏺</div><div class="fi-title">Handcrafted Quality</div><div class="fi-desc">Authentic weaves from skilled artisans</div></div>
+  <div class="fi"><div class="fi-icon">✅</div><div class="fi-title">Order in Minutes</div><div class="fi-desc">Instant confirmation via WhatsApp</div></div>
+</div>
+
+<!-- TESTIMONIALS -->
+<section class="section" id="testimonials" style="background:#fff;text-align:center;">
+  <div class="s-label" style="text-align:center;">Customer Love</div>
+  <h2 class="s-title" style="text-align:center;">What Our Customers Say</h2>
+  <div class="divider"></div>
+  <div class="tgrid">
+    <div class="tcard">
+      <div class="stars">★★★★★</div>
+      <p class="tq">"Ordered a Soft silk for my daughter's wedding. The quality was absolutely stunning — just as described. Everyone loved it!"</p>
+      <div class="tn">Meenakshi R.</div><div class="tl">Coimbatore</div>
+    </div>
+    <div class="tcard">
+      <div class="stars">★★★★★</div>
+      <p class="tq">"The Kerala Kasavu saree was perfect for Onam. Crisp, bright and the gold border was exactly what I wanted. Super fast delivery too!"</p>
+      <div class="tn">Priya N.</div><div class="tl">Thrissur, Kerala</div>
+    </div>
+    <div class="tcard">
+      <div class="stars">★★★★☆</div>
+      <p class="tq">"Loved shopping via WhatsApp — they sent photos before packing and were very patient. Will definitely order again from Geetha Tex!"</p>
+      <div class="tn">Lakshmi S.</div><div class="tl">Chennai</div>
+    </div>
+  </div>
+</section>
+
+<!-- ORDER CTA -->
+<section id="whatsapp-order">
+  <div class="s-label" style="text-align:center;">Order via WhatsApp</div>
+  <h2 class="s-title" style="text-align:center;">Place Your Order Instantly</h2>
+  <div class="divider"></div>
+  <p style="text-align:center;color:#666;font-size:.92rem;max-width:500px;margin:0 auto;">Simply tap the button below to chat with us on WhatsApp. Share the saree you love and we'll confirm your order personally.</p>
+  <div class="opoints">
+    <div class="opoint">📸 Get real photos before ordering</div>
+    <div class="opoint">💳 UPI / Bank Transfer / COD</div>
+    <div class="opoint">📦 Pan-India delivery</div>
+    <div class="opoint">✅ Order confirmation in minutes</div>
+  </div>
+  <div style="text-align:center;">
+    <a class="wa-btn" href="https://wa.me/918438860182?text=Hi%20Geetha%20Tex!%20I'd%20like%20to%20place%20a%20saree%20order.%20Please%20help%20me." target="_blank">💬 Chat &amp; Order on WhatsApp</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer id="contact">
+  <div>
+    <span class="flogo">GeethaTex</span>
+    <p class="fdesc">Your trusted destination for Soft silk and Kerala sarees. Quality woven with care since 1998.</p>
+  </div>
+  <div>
+    <div class="fh">Collections</div>
+    <ul class="flinks">
+      <li><a href="#">Soft Silk Sarees</a></li>
+      <li><a href="#">Kerala Sarees</a></li>
+      <li><a href="#">Cotton Sarees</a></li>
+      <li><a href="#">Designer Sarees</a></li>
+    </ul>
+  </div>
+  <div>
+    <div class="fh">Contact Us</div>
+    <ul class="flinks">
+      <li><a href="https://wa.me/918438860182" target="_blank">📲 WhatsApp: +91 84388 60182</a></li>
+      <li><a href="tel:+918438860182">📞 Call Us</a></li>
+      <li><a href="mailto:geethatex@gmail.com">✉️ geethatex@gmail.com</a></li>
+      <li><a href="#">📍 Salem, Tamil Nadu</a></li>
+    </ul>
+  </div>
+</footer>
+<div class="fbot">
+  © 2025 GeethaTex. All rights reserved. &nbsp;·&nbsp;
+  <a href="https://srijith.vercel.app/" target="_blank">Design by SRIJITH</a>
+</div>
+
+<!-- WA FLOAT -->
+<a class="wa-float" href="https://wa.me/918438860182?text=Hi%20Geetha%20Tex!%20I%20want%20to%20order%20a%20saree." target="_blank" title="Order on WhatsApp">💬</a>
+
+<!-- ══ ADMIN ══ -->
+<div class="admin-overlay" id="adminOverlay">
+  <div class="admin-panel">
+    <div class="admin-hdr">
+      <h2>⚙ Admin Panel — Manage Products</h2>
+      <div class="admin-hdr-r">
+        <button class="btn-logout" id="btnLogout" onclick="doLogout()">🚪 Logout</button>
+        <button class="btn-x" id="btnClose">✕</button>
+      </div>
+    </div>
+
+    <!-- LOGIN SCREEN — PIN PAD -->
+    <div class="login-screen" id="loginScreen">
+      <div class="l-brand">GeethaTex</div>
+      <div class="l-sub">Admin Access</div>
+
+      <!-- 4 dots showing progress -->
+      <div class="pin-dots" id="pinDots">
+        <div class="pin-dot" id="d0"></div>
+        <div class="pin-dot" id="d1"></div>
+        <div class="pin-dot" id="d2"></div>
+        <div class="pin-dot" id="d3"></div>
+      </div>
+
+      <div class="l-err" id="lErr"></div>
+
+      <!-- Number pad -->
+      <div class="pin-pad" id="pinPad">
+        <button class="pin-key" data-n="1">1</button>
+        <button class="pin-key" data-n="2">2</button>
+        <button class="pin-key" data-n="3">3</button>
+        <button class="pin-key" data-n="4">4</button>
+        <button class="pin-key" data-n="5">5</button>
+        <button class="pin-key" data-n="6">6</button>
+        <button class="pin-key" data-n="7">7</button>
+        <button class="pin-key" data-n="8">8</button>
+        <button class="pin-key" data-n="9">9</button>
+        <button class="pin-key del" id="pinDel">⌫</button>
+        <button class="pin-key zero" data-n="0">0</button>
+      </div>
+
+      <div class="pin-hint">Enter your 4-digit PIN</div>
+    </div>
+
+    <!-- ADMIN CONTENT -->
+    <div class="admin-content" id="adminContent">
+      <div>
+        <div class="col-title" id="formTitle">Add New Product</div>
+        <div class="img-box" id="imgBox" onclick="document.getElementById('imgInput').click()">
+          <div style="font-size:2rem;color:#ccc">🖼</div>
+          <div class="img-hint">Click to upload image</div>
+          <div class="img-ov"><span style="font-size:1.3rem">📷</span><span>Change image</span></div>
+        </div>
+        <input type="file" id="imgInput" accept="image/*" style="display:none"/>
+        <div class="fg">
+          <label>Product Name</label>
+          <input type="text" id="fName" placeholder="e.g. Pure Kanjivaram Silk Saree"/>
+        </div>
+        <div class="fg-row">
+          <div class="fg">
+            <label>Price (₹)</label>
+            <input type="number" id="fPrice" placeholder="e.g. 4500" min="0"/>
+          </div>
+          <div class="fg">
+            <label>Category</label>
+            <select id="fCat">
+              <option value="">Select...</option>
+              <option>Soft Silk</option>
+              <option>Kerala Sarees</option>
+              <option>Cotton</option>
+              <option>Designer</option>
+            </select>
+          </div>
+        </div>
+        <input type="hidden" id="editId"/>
+        <button class="btn-add" id="submitBtn" onclick="submitProduct()">
+          <span id="sIcon">＋</span><span id="sLabel">Add Product</span>
+        </button>
+        <button class="btn-cancel" id="cancelBtn" style="display:none" onclick="resetForm()">Cancel Edit</button>
+      </div>
+      <div>
+        <div class="col-title">All Products <span class="cpill" id="cpill">0</span></div>
+        <div class="plist" id="pList"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script>
+// ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+// NO CREDENTIALS IN THIS FILE — auth via /api/login
+// ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+let products = [], currentImg = '', tapCount = 0, tapTimer = null, activeFilter = 'All';
+
+// Token stored in sessionStorage only (cleared when browser tab closes)
+function getToken() { return sessionStorage.getItem('gt_admin_token'); }
+function setToken(t) { sessionStorage.setItem('gt_admin_token', t); }
+function clearToken() { sessionStorage.removeItem('gt_admin_token'); }
+function isLoggedIn() { return !!getToken(); }
+
+function load() {
+  try { const s = localStorage.getItem('gt_v3'); if (s) products = JSON.parse(s); } catch(e) {}
+  if (!products.length) {
+    products = [
+      {id:1001,name:'Pure Kanjivaram Silk',price:6500,category:'Soft Silk',img:'',badge:'Bestseller'},
+      {id:1002,name:'Kerala Kasavu Saree',price:3200,category:'Kerala Sarees',img:'',badge:'Trending'},
+      {id:1003,name:'Bridal Soft Silk',price:9800,category:'Soft Silk',img:'',badge:'New'},
+      {id:1004,name:'Onam Special Kasavu',price:2800,category:'Kerala Sarees',img:'',badge:''},
+      {id:1005,name:'Cotton Handloom Saree',price:1800,category:'Cotton',img:'',badge:''},
+      {id:1006,name:'Designer Zari Silk',price:12500,category:'Designer',img:'',badge:'Premium'},
+    ];
+    save();
+  }
+}
+function save() { localStorage.setItem('gt_v3', JSON.stringify(products)); }
+
+/* ── 5-tap logo to open admin ── */
+document.getElementById('logoBtn').addEventListener('click', e => {
+  e.preventDefault(); tapCount++;
+  const left = 5 - tapCount, hint = document.getElementById('tapHint');
+  if (left > 0) { hint.textContent = '·'.repeat(left); hint.style.color = '#b8860b'; }
+  clearTimeout(tapTimer);
+  tapTimer = setTimeout(() => { tapCount = 0; hint.textContent = ''; }, 2500);
+  if (tapCount >= 5) { tapCount = 0; hint.textContent = ''; openAdmin(); }
+});
+
+function openAdmin() {
+  document.getElementById('adminOverlay').classList.add('open');
+  document.body.style.overflow = 'hidden';
+  isLoggedIn() ? showContent() : showLogin();
+}
+document.getElementById('btnClose').onclick = closeAdmin;
+document.getElementById('adminOverlay').addEventListener('click', e => {
+  if (e.target === document.getElementById('adminOverlay')) closeAdmin();
+});
+function closeAdmin() {
+  document.getElementById('adminOverlay').classList.remove('open');
+  document.body.style.overflow = '';
+  resetForm();
+}
+
+function showLogin() {
+  document.getElementById('loginScreen').classList.add('on');
+  document.getElementById('adminContent').classList.remove('on');
+  document.getElementById('btnLogout').style.display = 'none';
+  pinReset();
+}
+function showContent() {
+  document.getElementById('loginScreen').classList.remove('on');
+  document.getElementById('adminContent').classList.add('on');
+  document.getElementById('btnLogout').style.display = 'inline-block';
+  renderList();
+}
+
+/* ── PIN PAD ── */
+let pinValue = '';
+
+function pinReset() {
+  pinValue = '';
+  document.getElementById('lErr').textContent = '';
+  updateDots();
+}
+
+function updateDots() {
+  for (let i = 0; i < 4; i++) {
+    document.getElementById('d' + i).classList.toggle('filled', i < pinValue.length);
+  }
+}
+
+function pinShake() {
+  document.getElementById('pinDots').querySelectorAll('.pin-dot').forEach(d => {
+    d.classList.remove('shake');
+    void d.offsetWidth;
+    d.classList.add('shake');
+  });
+}
+
+document.getElementById('pinPad').addEventListener('click', async e => {
+  const key = e.target.closest('.pin-key'); if (!key) return;
+  if (key.id === 'pinDel') { pinValue = pinValue.slice(0, -1); updateDots(); return; }
+  const n = key.dataset.n;
+  if (n === undefined || pinValue.length >= 4) return;
+  pinValue += n; updateDots();
+  if (pinValue.length === 4) await submitPin();
+});
+
+document.addEventListener('keydown', e => {
+  if (!document.getElementById('loginScreen').classList.contains('on')) return;
+  if (e.key >= '0' && e.key <= '9' && pinValue.length < 4) {
+    pinValue += e.key; updateDots();
+    if (pinValue.length === 4) submitPin();
+  } else if (e.key === 'Backspace') {
+    pinValue = pinValue.slice(0, -1); updateDots();
+  }
+});
+
+async function submitPin() {
+  const pad = document.getElementById('pinPad');
+  const errEl = document.getElementById('lErr');
+  pad.style.pointerEvents = 'none';
+  errEl.textContent = '';
+  try {
+    const res = await fetch('/api/login', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ pin: pinValue })
+    });
+    if (res.ok) {
+      const { token } = await res.json();
+      setToken(token); showContent();
+    } else {
+      pinShake();
+      errEl.textContent = '✕ Incorrect PIN';
+      setTimeout(() => { pinReset(); pad.style.pointerEvents = ''; }, 700);
+      return;
+    }
+  } catch (err) {
+    errEl.textContent = '✕ Network error. Please try again.';
+    pinReset();
+  }
+  pad.style.pointerEvents = '';
+}
+
+function doLogout() { clearToken(); closeAdmin(); }
+
+/* ── IMAGE UPLOAD ── */
+document.getElementById('imgInput').addEventListener('change', function() {
+  const f = this.files[0]; if (!f) return;
+  const r = new FileReader();
+  r.onload = e => {
+    currentImg = e.target.result;
+    const box = document.getElementById('imgBox');
+    box.innerHTML = `<img src="${currentImg}" alt=""><div class="img-ov"><span style="font-size:1.3rem">📷</span><span>Change image</span></div>`;
+    box.onclick = () => document.getElementById('imgInput').click();
+  };
+  r.readAsDataURL(f);
+});
+
+/* ── RENDER ── */
+const emo = {'Soft Silk':'🥻','Kerala Sarees':'🪷','Cotton':'🌿','Designer':'✨'};
+
+function renderProducts(filter) {
+  if (filter !== undefined) activeFilter = filter;
+  const grid = document.getElementById('productsGrid');
+  const list = activeFilter === 'All' ? products : products.filter(p => p.category === activeFilter);
+  if (!list.length) {
+    grid.innerHTML = `<div class="empty-g"><div style="font-size:3rem;margin-bottom:.75rem">🌸</div><p>No products in this category yet.</p></div>`;
+    return;
+  }
+  grid.innerHTML = list.map(p => `
+    <div class="pcard">
+      <div class="pcard-img">
+        ${p.img ? `<img src="${p.img}" alt="${h(p.name)}">` : `<span>${emo[p.category]||'🥻'}</span>`}
+        ${p.badge ? `<div class="pcard-badge">${h(p.badge)}</div>` : ''}
+      </div>
+      <div class="pcard-body">
+        <div class="pcard-cat">${h(p.category)}</div>
+        <div class="pcard-name">${h(p.name)}</div>
+        <div class="pcard-price">₹${Number(p.price).toLocaleString('en-IN')}</div>
+        <a class="pcard-btn" href="https://wa.me/918438860182?text=${encodeURIComponent('Hi Geetha Tex mam ! I want to order: '+p.name+' (₹'+Number(p.price).toLocaleString('en-IN')+')')}" target="_blank">📲 Order via WhatsApp</a>
+      </div>
+    </div>
+  `).join('');
+}
+
+function renderList() {
+  document.getElementById('cpill').textContent = products.length;
+  const el = document.getElementById('pList');
+  if (!products.length) {
+    el.innerHTML = `<div class="empty-g"><div style="font-size:3rem;margin-bottom:.75rem">🌺</div><p>No products yet.</p></div>`;
+    return;
+  }
+  el.innerHTML = products.map(p => `
+    <div class="pli">
+      <div class="pli-th">${p.img ? `<img src="${p.img}" alt="">` : emo[p.category]||'🥻'}</div>
+      <div class="pli-inf">
+        <div class="pli-nm">${h(p.name)}</div>
+        <div class="pli-mt">${h(p.category)} · ₹${Number(p.price).toLocaleString('en-IN')}</div>
+      </div>
+      <div class="pli-ac">
+        <button class="btn-e" onclick="editProduct(${p.id})">Edit</button>
+        <button class="btn-d" onclick="delProduct(${p.id})">Del</button>
+      </div>
+    </div>
+  `).join('');
+}
+
+/* ── CRUD ── */
+function submitProduct() {
+  if (!isLoggedIn()) { toast('Session expired. Please login again.', 'error'); doLogout(); return; }
+  const name = document.getElementById('fName').value.trim();
+  const price = document.getElementById('fPrice').value.trim();
+  const cat = document.getElementById('fCat').value;
+  const eid = document.getElementById('editId').value;
+
+  if (!name)                          { toast('Please enter a product name', 'error'); return; }
+  if (!price || isNaN(price) || Number(price) < 0) { toast('Please enter a valid price', 'error'); return; }
+  if (!cat)                           { toast('Please select a category', 'error'); return; }
+
+  if (eid) {
+    const i = products.findIndex(p => p.id == eid);
+    if (i !== -1) {
+      products[i] = { ...products[i], name, price: Number(price), category: cat, img: currentImg || products[i].img };
+      toast('Product updated!', 'success');
+    }
+  } else {
+    products.push({ id: Date.now(), name, price: Number(price), category: cat, img: currentImg, badge: '' });
+    toast('Product added!', 'success');
+  }
+  save(); renderProducts(); renderList(); resetForm();
+}
+
+function editProduct(id) {
+  if (!isLoggedIn()) { toast('Session expired. Please login again.', 'error'); return; }
+  const p = products.find(x => x.id === id); if (!p) return;
+  document.getElementById('fName').value = p.name;
+  document.getElementById('fPrice').value = p.price;
+  document.getElementById('fCat').value = p.category;
+  document.getElementById('editId').value = p.id;
+  currentImg = '';
+  const box = document.getElementById('imgBox');
+  if (p.img) {
+    box.innerHTML = `<img src="${p.img}" alt=""><div class="img-ov"><span style="font-size:1.3rem">📷</span><span>Change image</span></div>`;
+  } else {
+    box.innerHTML = `<div style="font-size:2rem;color:#ccc">🖼</div><div class="img-hint">Click to upload image</div><div class="img-ov"><span style="font-size:1.3rem">📷</span><span>Change image</span></div>`;
+  }
+  box.onclick = () => document.getElementById('imgInput').click();
+  document.getElementById('formTitle').textContent = 'Edit Product';
+  document.getElementById('sIcon').textContent = '✎';
+  document.getElementById('sLabel').textContent = 'Update Product';
+  document.getElementById('cancelBtn').style.display = 'block';
+}
+
+function delProduct(id) {
+  if (!isLoggedIn()) { toast('Session expired. Please login again.', 'error'); return; }
+  const p = products.find(x => x.id === id); if (!p) return;
+  if (!confirm(`Delete "${p.name}"?`)) return;
+  products = products.filter(x => x.id !== id);
+  save(); renderProducts(); renderList();
+  toast('Product deleted.', 'error');
+}
+
+function resetForm() {
+  document.getElementById('fName').value = '';
+  document.getElementById('fPrice').value = '';
+  document.getElementById('fCat').value = '';
+  document.getElementById('editId').value = '';
+  currentImg = '';
+  const box = document.getElementById('imgBox');
+  box.innerHTML = `<div style="font-size:2rem;color:#ccc">🖼</div><div class="img-hint">Click to upload image</div><div class="img-ov"><span style="font-size:1.3rem">📷</span><span>Change image</span></div>`;
+  box.onclick = () => document.getElementById('imgInput').click();
+  document.getElementById('formTitle').textContent = 'Add New Product';
+  document.getElementById('sIcon').textContent = '＋';
+  document.getElementById('sLabel').textContent = 'Add Product';
+  document.getElementById('cancelBtn').style.display = 'none';
+}
+
+document.getElementById('filterRow').addEventListener('click', e => {
+  const btn = e.target.closest('.filter-btn'); if (!btn) return;
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active'); renderProducts(btn.dataset.cat);
+});
+
+let toastT;
+function toast(msg, type) {
+  const el = document.getElementById('toast');
+  el.textContent = msg; el.className = `toast show ${type}`;
+  clearTimeout(toastT); toastT = setTimeout(() => el.className = 'toast', 3000);
+}
+function h(s) { return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }
+
+load(); renderProducts();
+</script>
+</body>
+</html>
